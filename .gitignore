@@ -1,0 +1,32 @@
+
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+# Editor directories and files
+/.idea
+/.vscode
+.DS_Store
+# Node and javascript
+/node_modules
+npm-debug.log*
+yarn-error.log*
+/public/hot
+/public/storage
+/build
+yarn.lock
+
+# Testing
+phpunit.xml
+.phpunit.result.cache
+/tests/html
+/coverage
+/temp
+
+# Environment files
+.env
+.env.*
+
+# Application
+/vendor
+composer.phar
+composer.repo.json
