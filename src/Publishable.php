@@ -54,13 +54,4 @@ trait Publishable
     {
         return $this->isPublishable() ? !is_null($this->published_at) : false;
     }
-
-    public function getArrayableAppends(): array
-    {
-        $appends = ['isPublished'];
-
-        $this->appends = array_unique(array_merge($this->appends, $appends));
-
-        return $this->appends;
-    }
 }

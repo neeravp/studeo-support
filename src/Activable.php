@@ -14,10 +14,8 @@ trait Activable
 
     /**
      * Determine whether the user is active or not.
-     *
-     * @return boolean
      */
-    public function isActive()
+    public function isActive(): bool
     {
         return !is_null($this->active_since);
     }

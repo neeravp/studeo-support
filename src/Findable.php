@@ -46,4 +46,12 @@ trait Findable
     {
         return static::findByKeyQuery($key)->firstOrFail();
     }
+
+    /**
+     * Determine whether the model instance is findable or not.
+     */
+    public function isFindable(): bool
+    {
+        return in_array(__TRAIT__, class_uses_recursive(get_called_class()));
+    }
 }
