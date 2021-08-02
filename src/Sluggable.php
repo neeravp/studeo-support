@@ -24,7 +24,7 @@ trait Sluggable
     /**
      * Get the value to generate slug for the model record.
      */
-    public function slugFrom(): string
+    public function slugFrom(): ?string
     {
         return $this->{static::$slugFromColumn};
     }
