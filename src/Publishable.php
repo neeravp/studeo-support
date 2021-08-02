@@ -52,6 +52,6 @@ trait Publishable
 
     public function getIsPublishedAttribute(): bool
     {
-        return $this->isPublishable() ? !is_null($this->published_at) : false;
+        return $this->isPublishable() ? !is_null($this->publish_at) : false;
     }
 }
