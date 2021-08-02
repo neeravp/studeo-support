@@ -57,7 +57,7 @@ trait Publishable
 
     public function getArrayableAppends(): array
     {
-        $appends = ['published'];
+        $appends = ['isPublished'];
 
         $this->appends = array_unique(array_merge($this->appends, $appends));
 
