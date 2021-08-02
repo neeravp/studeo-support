@@ -49,4 +49,18 @@ trait Publishable
 
         return $this->casts;
     }
+
+    public function getIsPublishedAttribute(): bool
+    {
+        return $this->isPublishable() ? !is_null($this->published_at) : false;
+    }
+
+    public function getArrayableAppends(): array
+    {
+        $appends = ['published'];
+
+        $this->appends = array_unique(array_merge($this->appends, $appends));
+
+        return $this->appends;
+    }
 }
