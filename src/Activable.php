@@ -51,7 +51,7 @@ trait Activable
      */
     public function isActivable(): bool
     {
-        return in_array(static::class, class_uses_recursive(get_called_class()));
+        return in_array(__TRAIT__, class_uses_recursive(get_called_class()));
     }
 
     /**
